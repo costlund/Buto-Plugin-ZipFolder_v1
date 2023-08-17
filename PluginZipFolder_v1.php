@@ -60,7 +60,7 @@ class PluginZipFolder_v1{
       if ($file->isDir() == false)
       {
         $real_path = $file->getRealPath();
-        $relative_path = substr($real_path, strlen(($zip_folder)) + 1);
+        $relative_path = wfPhpfunc::substr($real_path, wfPhpfunc::strlen(($zip_folder)) + 1);
         $zip_archive->addFile($real_path, $relative_path);
       }
     }
